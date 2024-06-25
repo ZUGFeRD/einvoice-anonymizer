@@ -1,5 +1,5 @@
 # einvoice-anonymizer
-A python script to remove personal data from EN16931 XML CII e-invoices 
+A python script to remove personal data/anonymize/redact EN16931 XML CII e-invoices 
 
 [Andreas Starke](http://4s4u.de/additional_data/impressum/impressum.html) created this file as a pythonesk response to a [feature suggestion](https://github.com/ZUGFeRD/quba-viewer/issues/48)
 for [Quba viewer](https://quba-viewer.org/). It can be applied to the XML of e.g. ZUGFeRD 2 invoices or the XML of 
