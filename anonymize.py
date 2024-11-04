@@ -116,6 +116,7 @@ def main(xml_file, xpaths_file, mode="shuffle"):
     nsmap = xml_struct.getroot().nsmap.copy()
     for this_path in all_paths:
         this_path = this_path.rstrip("\n")
+        to_anonymize=""
         if this_path == "":
             continue
         try:
@@ -127,7 +128,7 @@ def main(xml_file, xpaths_file, mode="shuffle"):
             if mode == "shuffle":
                 new_value = shuffle(original_value)
             this_element.text = new_value
-            logger.info("{} - {}".format(original_value, new_value))
+            logger.info("{} from: {} to: {}".format(this_path,original_value, new_value))
     
     outFile = open(xml_file, "wb")
     # outFile.write('<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">\n')
